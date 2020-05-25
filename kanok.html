@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html class="skrollr skrollr-desktop"><head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>kanok.</title>
+</head>
+
+<body style="height: 4882px;">
+    <div class="container">
+        <section>
+            <div class="imgBx">
+                <img src="full-strips/kanok-full-strip.jpg" id="kanok-full">
+            </div>
+        </section>
+    </div>
+
+
+<script type="text/javascript">
+        let offset = 0;
+        let maxLeft = 0;
+
+        function replaceVerticalScrollByHorizontal(event) {
+            if (Math.abs(event.deltaY) > Math.abs(event.deltaX)) {
+                offset = Math.min(
+                    maxLeft,
+                    Math.max(0, offset + event.deltaY),
+                );
+                event.preventDefault();
+            }
+            return;
+        }
+
+        function updateScrollPos() {
+            requestAnimationFrame(updateScrollPos);
+            const node = document.querySelector('.container');
+            node.style.transform = `translateX(-${offset}px)`;
+        }
+
+        function getFullWidth() {
+            const nodes = Array.from(document.querySelectorAll('.container section'));
+            const w = nodes.reduce((val, node) => {
+                const nodeWidth = node.getBoundingClientRect().width;
+                return val + nodeWidth;
+            }, 0);
+            maxLeft = w - (document.body.clientWidth);
+        }
+
+        function init() {
+            document.querySelectorAll('.container section img').forEach(node => node.addEventListener('load', getFullWidth));
+            window.addEventListener('wheel', replaceVerticalScrollByHorizontal);
+            updateScrollPos();
+        }
+
+        init();
+    </script>
+    
+    
+    </body></html>

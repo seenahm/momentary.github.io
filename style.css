@@ -1,0 +1,208 @@
+html {
+    scroll-behavior: smooth; 
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    font-family: 'Fira Sans', sans-serif;
+    font-weight: 400;
+    overflow: hidden;
+    background-color: black;
+    color: white;
+    text-decoration: none; 
+}
+
+.container {
+    /* position: sticky;
+    top: 0;
+    left: 0; */
+    /*    width: 100%: */
+    display: flex;
+}
+
+section {
+    /* min-width: 100vw; */
+    height: auto;
+    display: flex;
+}
+
+section .imgBx {
+    /* position: relative; */
+    min-width: 50vw;
+    height: 100vh;
+}
+
+section .imgBx img {
+    /* position: absolute; */
+    height: 100vh;
+    width: auto;
+    object-fit: cover;
+    display: block;
+}
+
+section .textBx {
+    padding: 100px 60px;
+    font-size: 1em;
+    line-height: 30px; 
+}
+
+#logo {
+
+    height: 90vh;
+    padding-top: 5%;
+}
+
+#text-1 {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    left: -10%;
+    top: 65%;
+    transform: translateY(-50%);
+    width: 700px;
+    text-align: left;
+    margin-right: 150px; 
+}
+
+#text-2 {
+    position: relative;
+    top: 80%;
+    transform: translateY(-50%);
+    width: 700px;
+    text-align: left;
+}
+
+#text-3 {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    left: -10%;
+    top: 65%;
+    transform: translateY(-50%);
+    width: 450px;
+    text-align: left;
+    font-size: .75em; 
+}
+
+.selection-menu {
+   min-width: 50vw;
+    height: 100vh;
+    width: 200%;
+    object-fit: cover;
+    display: block;
+    margin-top: 35px; 
+}
+
+
+#selection-text {
+    width: 800px;
+    margin: auto;
+    padding: 0;
+    transform: rotate(-90deg); 
+    margin-top: 30%; 
+}
+
+.selection-images {
+    position: absolute; 
+    width: 50%; 
+    margin-top: 10%; 
+}
+
+#cherry {
+    transform: rotate(10deg); 
+    padding: 20px; 
+}
+
+#kanok {
+    transform: rotate(-10deg); 
+    padding: 20px; 
+}
+
+#gaew {
+    transform: rotate(-20deg); 
+    padding: 20px; 
+}
+
+#fortune {
+    transform: rotate(20deg); 
+    padding: 20px; 
+}
+
+#vinni {
+    transform: rotate(15deg); 
+    position: relative; 
+    left: 200px; 
+    padding: 20px ; 
+}
+
+a:hover {
+    cursor: pointer; 
+}
+
+#extra-space {
+    width: 500px; 
+    height: 500px; 
+    background-color: pink; 
+    
+}
+
+.jump-to {
+    position: fixed; 
+    top: 90vh; 
+    left: 85vw; 
+    z-index: 10; 
+}
+
+.jump-to img {
+    width: 50%; 
+}
+
+a:visited {
+    color: black; 
+}
+a {
+    color: black; 
+}
+
+
+#gaew-full, #cherry-full, #vinni-full, #kanok-full, #fortune-full{
+    height: 70vh; 
+    margin-top: 150px; 
+}
+
+
+.text-on-top {
+    position: absolute; 
+    color: white; 
+    font-size: .75em; 
+/*    background-color: blue; */
+    width: 200px; 
+    padding-top: 45%; 
+    padding-left: 5%; 
+    opacity: 0; 
+}
+
+.text-on-top:hover {
+    opacity: 1; 
+    
+}
+
+
+.text-on-top-2 {
+    position: absolute; 
+    color: white; 
+    font-size: .75em; 
+/*    background-color: blue; */
+    width: 200px; 
+    padding-top: 45%; 
+    padding-left: 15%; 
+    opacity: 0; 
+}
+
+.text-on-top-2:hover {
+    opacity: 1; 
+    
+}
+
